@@ -8,7 +8,7 @@ function getInitialTheme() {
     return savedTheme
   }
 
-  return 'light'
+  return 'dark'
 }
 
 export function useTheme() {
