@@ -1,0 +1,21 @@
+{
+  "name": "Kianoosh Vadaei",
+  "short_name": "Kianoosh",
+  "description": "Academic and AI engineering portfolio of Kianoosh Vadaei.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E1116",
+  "theme_color": "#008F7A",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
