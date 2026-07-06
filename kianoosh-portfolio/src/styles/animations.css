@@ -1,0 +1,85 @@
+.floating-math-layer {
+  position: fixed;
+  inset: -10vh 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-math-symbol-wrap {
+  position: absolute;
+  display: inline-block;
+  will-change: transform;
+}
+
+.floating-math-symbol {
+  display: inline-block;
+  color: var(--accent);
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+  text-shadow: 0 0 24px var(--shadow-hover);
+  will-change: transform;
+}
+
+[data-theme='light'] .floating-math-symbol {
+  color: rgba(0, 143, 122, 0.38);
+}
+
+[data-theme='dark'] .floating-math-symbol {
+  color: rgba(0, 255, 204, 0.34);
+}
+
+.academic-symbols {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.academic-symbol {
+  position: absolute;
+  bottom: -6rem;
+  color: var(--accent);
+  opacity: 0;
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: 300;
+  user-select: none;
+}
+
+@keyframes pulseRing {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.9;
+  }
+}
+
+@keyframes softFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-math-layer,
+  .academic-symbols {
+    display: none;
+  }
+
+  .avatar-ring {
+    animation: none;
+  }
+}
